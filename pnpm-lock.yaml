@@ -62,8 +62,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       iframe-resizer-react:
-        specifier: ^1.1.1
-        version: 1.1.1(@babel/core@7.26.0)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^5.0.0
+        version: 5.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
@@ -398,13 +398,6 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/plugin-proposal-private-property-in-object@7.21.11':
-    resolution: {integrity: sha512-0QZ8qP/3RLDVBwBFoWAwCtgcDZJVwA5LUJRZU8x2YFfKNuFq161wK3cuGrALu5yiPu+vzwTAg/sMWVNeWeNyaw==}
-    engines: {node: '>=6.9.0'}
-    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
   '@babel/plugin-syntax-import-assertions@7.26.0':
     resolution: {integrity: sha512-QCWT5Hh830hK5EQa7XzuqIkQU9tT/whqbDz7kuaZMHFl1inRRg7JnuAEOQ0Ur0QUl0NufCk1msK2BeY79Aj/eg==}
     engines: {node: '>=6.9.0'}
@@ -419,12 +412,6 @@ packages:
 
   '@babel/plugin-syntax-jsx@7.25.9':
     resolution: {integrity: sha512-ld6oezHQMZsZfp6pWtbjaNDF2tiiCYYDqQszHt5VV437lewP9aSi2Of99CK0D0XB21k7FLgnLcmQKyKzynfeAA==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/plugin-syntax-private-property-in-object@7.14.5':
-    resolution: {integrity: sha512-0wVnp9dxJ72ZUJDV27ZfbSj6iHLoytYZmh3rFcxNnvsJF3ktkzLDZPy/mA17HGsaQT3/DQsWYX1f1QGWkCoVUg==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -1190,6 +1177,15 @@ packages:
   '@humanwhocodes/object-schema@2.0.3':
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
+
+  '@iframe-resizer/core@5.1.5':
+    resolution: {integrity: sha512-uu0Ptk+R7vYY7R9HFsc5R4+p68rgGxrsWIq2sK9oanJPBtQ2P9pMYoRseM8F4AfOONHOeHxGByWeBmw7LTXmdA==}
+
+  '@iframe-resizer/react@5.1.5':
+    resolution: {integrity: sha512-klGfad00ZiVHIplWYJ04ACp8vU6xa5ujLSWEJOFcc8SqQyJv7T0UtxuUGPiEXvSGeaP5HgFvYFzua7YOw/blIg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -3209,17 +3205,12 @@ packages:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
 
-  iframe-resizer-react@1.1.1:
-    resolution: {integrity: sha512-s0EUUekv58FGbuWBanSCVsEKmmyBdWmdwQ8qx8g04jlNlCR7pNuDz7fw7zo5T5sdssl6yRMDl97NBdwD1gfDyQ==}
+  iframe-resizer-react@5.1.5:
+    resolution: {integrity: sha512-R7kJgzniX9S16Lc9QWUyc+NYXftQnT0agdroFISojxC+/ARJa+ZhrcSns/3xjzQnsY+nk5TdkafkrRNIpr3Big==}
     engines: {node: '>=16', npm: '>=5'}
     peerDependencies:
-      prop-types: ^15.7.2
-      react: ^16.13.1 || ^18.0.0
-      react-dom: ^16.13.1 || ^18.0.0
-
-  iframe-resizer@4.4.5:
-    resolution: {integrity: sha512-U8bCywf/Gh07O69RXo6dXAzTtODQrxaHGHRI7Nt4ipXsuq6EMxVsOP/jjaP43YtXz/ibESS0uSVDN3sOGCzSmw==}
-    engines: {node: '>=0.8.0'}
+      react: ^16.13.1 || >= 18.0.0
+      react-dom: ^16.13.1 || >= 18.0.0
 
   ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
@@ -5637,16 +5628,6 @@ snapshots:
     dependencies:
       '@babel/core': 7.26.0
 
-  '@babel/plugin-proposal-private-property-in-object@7.21.11(@babel/core@7.26.0)':
-    dependencies:
-      '@babel/core': 7.26.0
-      '@babel/helper-annotate-as-pure': 7.25.9
-      '@babel/helper-create-class-features-plugin': 7.25.9(@babel/core@7.26.0)
-      '@babel/helper-plugin-utils': 7.25.9
-      '@babel/plugin-syntax-private-property-in-object': 7.14.5(@babel/core@7.26.0)
-    transitivePeerDependencies:
-      - supports-color
-
   '@babel/plugin-syntax-import-assertions@7.26.0(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
@@ -5658,11 +5639,6 @@ snapshots:
       '@babel/helper-plugin-utils': 7.25.9
 
   '@babel/plugin-syntax-jsx@7.25.9(@babel/core@7.26.0)':
-    dependencies:
-      '@babel/core': 7.26.0
-      '@babel/helper-plugin-utils': 7.25.9
-
-  '@babel/plugin-syntax-private-property-in-object@7.14.5(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/helper-plugin-utils': 7.25.9
@@ -6574,6 +6550,16 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/object-schema@2.0.3': {}
+
+  '@iframe-resizer/core@5.1.5': {}
+
+  '@iframe-resizer/react@5.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.26.0
+      '@iframe-resizer/core': 5.1.5
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      warning: 4.0.3
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
@@ -8890,19 +8876,11 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  iframe-resizer-react@1.1.1(@babel/core@7.26.0)(prop-types@15.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  iframe-resizer-react@5.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@babel/plugin-proposal-private-property-in-object': 7.21.11(@babel/core@7.26.0)
-      iframe-resizer: 4.4.5
-      prop-types: 15.8.1
+      '@iframe-resizer/react': 5.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      warning: 4.0.3
-    transitivePeerDependencies:
-      - '@babel/core'
-      - supports-color
-
-  iframe-resizer@4.4.5: {}
 
   ignore@5.3.1: {}
 
